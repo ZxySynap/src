@@ -5,6 +5,21 @@ window.onload = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
+    function applyMobileView() {
+        const body = document.body;
+        if (window.innerWidth <= 768) {
+            body.classList.add('mobile-view');
+        } else {
+            body.classList.remove('mobile-view');
+        }
+    }
+
+    // Apply mobile view on initial load
+    applyMobileView();
+
+    // Apply mobile view on window resize
+    window.addEventListener('resize', applyMobileView);
+
     document.addEventListener('scroll', function() {
         const header = document.querySelector('header');
         const scrollPosition = window.scrollY;
