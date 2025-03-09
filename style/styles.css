@@ -215,7 +215,7 @@ ul li a {
     }
 
     ul li {
-        flex: 1 1 auto;
+        flex: 1 1 auto; 
     }
 
     ul li a {
@@ -225,6 +225,10 @@ ul li a {
     .dex {
         height: 100vh;
         padding: 20px;
+    }
+
+    .dex:nth-child(n+4) {
+        display: none; 
     }
 
     .content h1 {
@@ -277,5 +281,9 @@ ul li a {
     .copyright {
         font-size: 6px;
         position: static;
+    }
+
+    .dex:nth-child(n+4) {
+        display: none; 
     }
 }
